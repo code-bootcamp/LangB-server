@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+  my_backend:
+    platform: linux/x86_64
+    image: asia.gcr.io/test1-347705/my-backend02:2.2.9
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # volumes:
+    #   - ./src:/my_backend/src
+    # env_file:
+    #   - ./.env.prod
+    ports:
+      - 3000:3000
+# services:
+#   my-backend:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     # volumes:
+#     #   - ./src:/myfolder/src
+
+#     env_file:
+#       - ./.env.prod
+
+#     ports:
+#       - 3000:3000
+
+# my-database:
+#   platform: linux/x86_64
+#   image: mysql:latest
+#   environment:
+#     MYSQL_DATABASE: 'classdocker'
+#     MYSQL_ROOT_PASSWORD: 'root'
+#   ports:
+#     - 3306:3306

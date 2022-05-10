@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: String!
+  email: String!
+  name: String!
+  age: Int!
+  point: Int!
+}
+
+type Query {
+  fetchUser: User!
+}
+
+type Mutation {
+  login(email: String!, password: String!): String!
+  restoreAccessToken: String!
+  uploadFile(files: [Upload!]!): [String!]!
+  createUser(email: String!, password: String!, name: String!): User!
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
